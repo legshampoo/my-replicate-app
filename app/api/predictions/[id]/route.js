@@ -6,6 +6,7 @@ const replicate = new Replicate({
 });
  
 export async function GET(request, {params}) {
+  console.log('start prediction');
   const { id } = params;
   const prediction = await replicate.predictions.get(id);
  
